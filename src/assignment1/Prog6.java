@@ -14,11 +14,12 @@ public class Prog6 {
 	}
 	
 	public static void removeDups() {
-		String[] a = new String[]{"horse", "dog", "cat", "horse","dog"};
+		String[] a = new String[]{"horse", "horse", "dog", "dog", "cat", "horse","dog"};
 		String[] b = new String[a.length];
 		int count = 0;
 		for(int i=0; i<a.length; i++) {
 			int present = 0;
+			
 			for(int j=0; j<b.length; j++) {
 				if(b[j] == (a[i])) {
 					present=1;
@@ -26,8 +27,13 @@ public class Prog6 {
 			}
 			
 			if(present<1) {
-				b[i] = a[i];
 				count++;
+				for(int k = 0; k<b.length; k++) {
+					if(b[k] == null) {
+						b[k] = a[i];
+						break;
+					}
+				}
 			}
 		}
 		
