@@ -10,7 +10,10 @@ import java.util.Arrays;
 public class Prog6 {
 
 	public static void main(String[] args) {
-		
+		removeDups();
+	}
+	
+	public static void removeDups() {
 		String[] a = new String[]{"horse", "dog", "cat", "horse","dog"};
 		String[] b = new String[a.length];
 		int count = 0;
@@ -31,7 +34,6 @@ public class Prog6 {
 		b = Arrays.copyOf(b, count);
 		
 		System.out.println("Result: " + Arrays.toString(b));
-
 	}
 
 }
