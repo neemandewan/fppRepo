@@ -8,6 +8,7 @@ package assignment1;
 public class Prog7 {
 
 	public static void main(String[] args) {
+		// args = JAVA FPP MPP C# ANDROID ANDENGINE
 		int count = 0;
 		String str;
 		for(String s: args) {

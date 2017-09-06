@@ -14,7 +14,7 @@ public class Prog6 {
 	}
 	
 	public static void removeDups() {
-		String[] a = new String[]{"horse", "horse", "dog", "dog", "cat", "horse","dog"};
+		String[] a = new String[]{"horse", "horse", "dog", "dog", "cat", "horse","dog", "elephant"};
 		String[] b = new String[a.length];
 		int count = 0;
 		for(int i=0; i<a.length; i++) {
