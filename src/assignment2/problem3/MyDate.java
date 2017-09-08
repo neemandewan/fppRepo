@@ -198,3 +198,84 @@ public class MyDate {
 	}
 
 }
+
+/*
+	OUTPUT:-
+	a. Today date in multiple formats:-
+	09/08/2017
+	September 08, 2017
+	251 2017
+	
+	b. overloaded constructors:-
+	Month: 9	 Day: 8	 Year:2017
+	09/08/2017
+	September 08, 2017
+	251 2017
+	
+	Month: SEPTEMBER	 Day: 8	 Year:2017
+	09/08/2017
+	September 08, 2017
+	251 2017
+	
+	Day: 251	 Year:2017
+	09/08/2017
+	September 08, 2017
+	251 2017
+	
+	
+	Enter 1 for format: MM/DD/YYYY
+	Enter 2 for format: Month DD, YYYY
+	Enter 3 for format: DDD YYYY
+	Enter 4 to exit
+	
+	1
+	Enter Month: 
+	11
+	Enter Day: 
+	18
+	Enter Year: 
+	1990
+	MM/dd/yyyy: 11/18/1990
+	MMMM dd,yyyy:November 18, 1990
+	DDD yyyy: 322 1990
+	
+	Do you want to Continue (y/n):
+	Y
+	
+	Enter 1 for format: MM/DD/YYYY
+	Enter 2 for format: Month DD, YYYY
+	Enter 3 for format: DDD YYYY
+	Enter 4 to exit
+	
+	2
+	Enter Month: 
+	september
+	Enter Day: 
+	18
+	Enter Year: 
+	1990
+	MM/dd/yyyy: 09/18/1990
+	MMMM dd,yyyy:September 18, 1990
+	DDD yyyy: 261 1990
+	
+	Do you want to Continue (y/n):
+	y
+	
+	Enter 1 for format: MM/DD/YYYY
+	Enter 2 for format: Month DD, YYYY
+	Enter 3 for format: DDD YYYY
+	Enter 4 to exit
+	
+	3
+	Enter Days of Year: 
+	289
+	Enter Year: 
+	1990
+	MM/dd/yyyy: 10/16/1990
+	MMMM dd,yyyy:October 16, 1990
+	DDD yyyy: 289 1990
+	
+	Do you want to Continue (y/n):
+	n
+	Terminated
+*/

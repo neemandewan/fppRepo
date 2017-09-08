@@ -46,3 +46,9 @@ public class Main {
 	}
 
 }
+
+/*
+	OUTPUT:-
+	[FirstName1, LastName1, ssn: 21A3451]
+	[FirstName2, LastName2, ssn: 21A3452]
+*/

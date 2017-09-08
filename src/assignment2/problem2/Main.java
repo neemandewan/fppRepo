@@ -38,3 +38,16 @@ public class Main {
 	}
 
 }
+
+/*
+	OUTPUT:-
+	Enter first name: Prabhab
+	Enter last name: Dewan
+	Enter dob in format yyyy-M-d1990-11-18
+	
+	a. person's age: 26
+	b. person's max heart rate: 194
+	c. person's target heart range: 132.0 - 175.4
+	d. person's toString() data: Person [fname=Prabhab, lName=Dewan, dob=1990-11-18, getAge()=26, getMaxmimumHeartRate()=194, getheartRateRange()=132.0 - 175.4]
+
+*/

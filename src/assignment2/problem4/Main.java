@@ -61,3 +61,35 @@ public class Main {
 	}
 
 }
+
+/*
+	OUTPUT:-
+	Enter C for Circle
+	Enter R for Rectangle
+	Enter T for Triangle
+	C
+	Enter the radius of the circle: 
+	12
+	The area of Circle is : 452.3893421169302
+	
+	Enter C for Circle
+	Enter R for Rectangle
+	Enter T for Triangle
+	R
+	Enter the width of the rectangle: 
+	12
+	Enter the length of the rectangle: 
+	13
+	The area of Rectangle is : 156.0
+
+	Enter C for Circle
+	Enter R for Rectangle
+	Enter T for Triangle
+	T
+	Enter the height of the triangle: 
+	12
+	Enter the base of the triangle: 
+	13
+	The area of Triangle is : 78.0
+
+*/
