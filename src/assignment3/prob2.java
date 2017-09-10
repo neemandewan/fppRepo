@@ -1,6 +1,6 @@
 package assignment3;
 
-public class prob2 {
+public class Prob2 {
 	
 	public static Character temp = null;
 	
