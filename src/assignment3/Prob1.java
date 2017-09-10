@@ -1,6 +1,6 @@
-package assignment3.prob1;
+package assignment3;
 
-public class Main {
+public class Prob1 {
 	
 	public static String sortStrings(String str) {
 		if (str == null || str.equals("")) {
@@ -17,20 +17,29 @@ public class Main {
 				}
 			}
 			
-			System.out.print(temp);
 			str = str.substring(0, pos) + str.substring(pos + 1);
-			return sortStrings(str);
+			
+			//Recursion goes here
+			return temp + sortStrings(str);
 		}
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void main(String[] args) {		
 		String s1 = "aerz";
 		String s2 = "aaby";
 		
-		String s = sortStrings(s1+s2);
-		System.out.println(s);
+		String s3 = "ace";
+		String s4 = "bdf";
+		
+		System.out.println(s1 + " and " + s2 + " sort string is " + sortStrings(s1+s2));
+		System.out.println(s3 + " and " + s4 + " sort string is " + sortStrings(s3+s4));
 		
 	}
 
 }
+
+/*
+	OUTPUT:-
+	aerz and aaby sort string is aaaberyz
+	ace and bdf sort string is abcdef
+*/
