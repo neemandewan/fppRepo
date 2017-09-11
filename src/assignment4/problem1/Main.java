@@ -18,9 +18,14 @@ public class Main {
 	}
 	
 	public static void printTotal(Shape[] shapes) {
+		int sumArea = 0;
+		int sumPerimeter = 0;
 		for(Shape s: shapes) {
-			System.out.println("Area is: " + s.calculateArea());
-			System.out.println("Perimeter is: " + s.calculatePerimeter() + "\n");
+			sumArea += s.calculateArea();
+			sumPerimeter += s.calculatePerimeter();
 		}
+		
+		System.out.println("sum of area is: " + sumArea);
+		System.out.println("sum of perimeter is: " + sumPerimeter);
 	}
 }
