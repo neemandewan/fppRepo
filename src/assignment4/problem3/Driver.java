@@ -30,3 +30,16 @@ public class Driver {
 	}
 
 }
+
+/*
+	OUTPUT:-
+	 /\  /\  \/  :)  || 
+
+	Individual Output:
+	
+	UpwardHat: /\ 
+	UpwardHat: /\ 
+	DownwardHat: \/ 
+	FaceMaker: :) 
+	Vertical: || 
+*/

@@ -2,11 +2,17 @@ package assignment4.problem4;
 
 public abstract class Employee {
 	private String firstName, lastName, socialSecurityNumber;
-
-	public String getFirstName() {
-		return firstName;
+	
+	public Employee(String firstName, String lastName, String socialSecurityNumber) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.socialSecurityNumber = socialSecurityNumber;
 	}
 
+	public String getFirstName() {
+		return this.firstName;
+	}
+	
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
@@ -29,7 +35,7 @@ public abstract class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [firstName=" + firstName + ", lastName=" + lastName + ", socialSecurityNumber="
+		return "Employee [firstName: " + firstName + ", lastName: " + lastName + ", ssn: "
 				+ socialSecurityNumber + "]";
 	}
 	

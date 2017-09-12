@@ -29,3 +29,9 @@ public class Main {
 		System.out.println("sum of perimeter is: " + sumPerimeter);
 	}
 }
+
+/*
+	OUTPUT:-
+	sum of area is: 2265
+	sum of perimeter is: 394
+*/

@@ -59,3 +59,24 @@ public class Main {
 	}
 
 }
+
+/*
+	OUTPUT:- 
+	Do you want to see the sum of all Professor salary, sum of all secretary salary and all salaries in the department
+	Y
+	Salary of Prof. Name 1 is 5000.0
+	Salary of Prof. Name 2 is 6000.0
+	Salary of Prof. Name 3 is 7000.0
+	Salary of Secr. Name 4 is 3099.84
+	Salary of Secr. Name 5 is 4109.8
+	
+	Total salary: 25209.64
+	
+	Do you want to see the sum of all Professor salary, sum of all secretary salary and all salaries in the department
+	N
+	Salary of Prof. Name 1 is 5000.0
+	Salary of Prof. Name 2 is 6000.0
+	Salary of Prof. Name 3 is 7000.0
+	Salary of Secr. Name 4 is 3099.84
+	Salary of Secr. Name 5 is 4109.8
+*/

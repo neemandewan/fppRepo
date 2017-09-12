@@ -9,16 +9,16 @@ public class Circle extends Shape {
 	}
 	
 	protected double calculateArea() {
-		return Math.PI*this.radius*this.radius;
+		return Math.PI*radius*radius;
 	}
 	
 	protected double calculatePerimeter() {
-		return 2*Math.PI*this.radius;
+		return 2*Math.PI*radius;
 	}
 
 	@Override
 	public String toString() {
-		return "Circle [radius=" + radius + ", calculateArea()=" + calculateArea() + ", calculatePerimeter()="
+		return "Circle [radius: " + radius + ", calculateArea(): " + calculateArea() + ", calculatePerimeter(): "
 				+ calculatePerimeter() + "]";
 	}
 	

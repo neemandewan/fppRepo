@@ -40,6 +40,6 @@ public class DeptEmployee {
 
 
 	public double computeSalary() {
-		return this.salary;
+		return salary;
 	}
 }

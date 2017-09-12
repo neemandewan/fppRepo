@@ -11,17 +11,17 @@ public class Rectangle extends Shape {
 	}
 	
 	protected double calculateArea() {
-		return this.width*this.height;
+		return width*height;
 	}
 	
 	protected double calculatePerimeter() {
-		return 2*this.height + 2*this.width;
+		return 2*height + 2*width;
 	}
 
 	@Override
 	public String toString() {
-		return "Rectangle [width=" + width + ", height=" + height + ", color=" + color + ", calculateArea()="
-				+ calculateArea() + ", calculatePerimeter()=" + calculatePerimeter() + "]";
+		return "Rectangle [width: " + width + ", height: " + height + ", color: " + color + ", calculateArea(): "
+				+ calculateArea() + ", calculatePerimeter(): " + calculatePerimeter() + "]";
 	}
 
 }

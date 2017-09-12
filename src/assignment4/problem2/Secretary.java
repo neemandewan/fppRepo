@@ -20,6 +20,6 @@ public class Secretary extends DeptEmployee {
 	
 	@Override
 	public double computeSalary() {
-		return 12*this.overtimeHours + super.computeSalary();
+		return 12*overtimeHours + super.computeSalary();
 	}
 }

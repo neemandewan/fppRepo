@@ -18,7 +18,7 @@ public class Shape {
 
 	@Override
 	public String toString() {
-		return "Shape [color=" + color + ", calculateArea()=" + calculateArea() + ", calculatePerimeter()="
+		return "Shape [color: " + color + ", calculateArea(): " + calculateArea() + ", calculatePerimeter(): "
 				+ calculatePerimeter() + "]";
 	}
 	
