@@ -147,6 +147,60 @@ public class MatricConversionAssistant extends JFrame {
 		contentPane.add(convertBtn);
 		
 		convertBtn.addActionListener(evt -> {
+			String mile, pound, gallon, fh;
+			
+			mile = lt1.getText();
+			pound = lt2.getText();
+			gallon = lt3.getText();
+			fh = lt4.getText();
+			
+			if(mile.length() == 0) {
+				rt1.setText("0");
+			}
+			
+			if(pound.length() == 0) {
+				rt2.setText("0");
+			}
+			
+			if(gallon.length() == 0) {
+				rt3.setText("0");
+			}
+			
+			if(fh.length() == 0) {
+				rt4.setText("0");
+			}
+			
+			try {
+				Double mileI = Double.parseDouble(mile);
+				Double kilo = mileI * 1.609344;
+				rt1.setText(kilo.toString());
+			}catch(NumberFormatException e) {
+				rt1.setText("Number Error");
+			}
+			
+			try {
+				Double poundI = Double.parseDouble(pound);
+				Double kg = poundI * 0.453592;
+				rt2.setText(kg.toString());
+			}catch(NumberFormatException e) {
+				rt2.setText("Number Error");
+			}
+			
+			try {
+				Double gallonI = Double.parseDouble(gallon);
+				Double ltr = gallonI * 3.78541;
+				rt3.setText(ltr.toString());
+			}catch(NumberFormatException e) {
+				rt3.setText("Number Error");
+			}
+			
+			try {
+				Double fhI = Double.parseDouble(fh);
+				Double cs = (Double) ((fhI - 32) * 0.5556);
+				rt4.setText(cs.toString());
+			}catch(NumberFormatException e) {
+				rt4.setText("Number Error");
+			}
 			
 		});
 		
