@@ -90,7 +90,7 @@ public class StringUtility extends JFrame implements ActionListener {
 		JButton src = (JButton) e.getSource();
 		
 		if(input.getText().length() == 0) {
-			JOptionPane.showMessageDialog(src, "No input. Please provide input.");
+			JOptionPane.showMessageDialog(null, "No input. Please provide input.", "Failure", JOptionPane.ERROR_MESSAGE);
 		} else {
 			String in = input.getText();
 			switch(src.getText().toLowerCase()) {

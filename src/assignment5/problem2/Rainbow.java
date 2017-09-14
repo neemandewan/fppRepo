@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 @SuppressWarnings("serial")
 public class Rainbow extends JFrame implements ActionListener{
 	
-	private static final int FRAME_WIDTH    = 630;
+	private static final int FRAME_WIDTH    = 616;
     private static final int FRAME_HEIGHT   = 260;
     private static final int FRAME_X_ORIGIN = 380;
     private static final int FRAME_Y_ORIGIN = 250;
@@ -38,9 +38,8 @@ public class Rainbow extends JFrame implements ActionListener{
 		
 		setTitle("FlowLayout Test");
 		setBounds(FRAME_X_ORIGIN, FRAME_Y_ORIGIN, FRAME_WIDTH, FRAME_HEIGHT);
-		setLayout(new FlowLayout(FlowLayout.CENTER));
-		
-		
+		setLayout(new FlowLayout(FlowLayout.LEFT));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		r1 = new JButton("red");
 		r1.setFocusPainted(false);
