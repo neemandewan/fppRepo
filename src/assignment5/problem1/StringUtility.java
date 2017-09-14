@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 @SuppressWarnings("serial")
@@ -76,12 +77,50 @@ public class StringUtility extends JFrame implements ActionListener {
 		contentPane.add(output);
 		contentPane.add(l1);
 		contentPane.add(l2);
+		
+		countLetters.addActionListener(this);
+		reverseLetters.addActionListener(this);
+		removeDuplicates.addActionListener(this);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-
+		
+		JButton src = (JButton) e.getSource();
+		
+		if(input.getText().length() == 0) {
+			JOptionPane.showMessageDialog(src, "No input. Please provide input.");
+		} else {
+			String in = input.getText();
+			switch(src.getText().toLowerCase()) {
+			case "count letters":
+				output.setText("Counted Letters: " + in.length());
+				break;
+			case "reverse letters":
+				output.setText("Reversed Letters: " + new StringBuffer(in).reverse().toString());
+				break;
+			case "remove duplicates":
+				String out = "";
+				for(int i=0;i<in.length();i++) {
+					boolean present = false;
+					for(int j=0;j<out.length();j++) {
+						if(in.substring(i, i+1).equals(out.substring(j, j+1))) {
+							present = true;
+						}
+					}
+					
+					if(!present) {
+						out += in.substring(i, i+1);
+					}
+				}
+				output.setText("Removed Duplicates: " + out);
+				break;
+			default:
+				// Do Nothing..
+			}
+		}
+		
 	}
 
 }

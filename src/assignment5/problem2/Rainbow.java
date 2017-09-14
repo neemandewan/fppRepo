@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 public class Rainbow extends JFrame implements ActionListener{
 	
 	private static final int FRAME_WIDTH    = 630;
-    private static final int FRAME_HEIGHT   = 250;
+    private static final int FRAME_HEIGHT   = 260;
     private static final int FRAME_X_ORIGIN = 380;
     private static final int FRAME_Y_ORIGIN = 250;
     private static final int BUTTON_WIDTH  = 80;
