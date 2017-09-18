@@ -20,3 +20,13 @@ public class Main {
 	}
 
 }
+
+/*
+ 	OUTPUT:-
+ 	a -> Annie
+	b -> Billy
+	w -> Willie
+	
+	w -> Willie
+
+*/
