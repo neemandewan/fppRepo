@@ -56,6 +56,46 @@ public class Person {
 	public int size() {
 		return size;
 	}
+	
+	public boolean find(String s){
+		for(Person p : person){
+			if(p.getLast().equals(s)) return true;
+		}
+		return false;
+	}
+	
+	public void insert(Person per, int pos){
+		if(pos > size) return;
+		if(pos >= person.length||size+1 > person.length) {
+			resize();
+		}
+		Person[] temp = new Person[person.length+1];
+		System.arraycopy(person,0,temp,0,pos);
+		temp[pos] = per;
+		
+		System.arraycopy(person,pos,temp,pos+1, person.length - pos);
+		person = temp;
+		++size;
+		
+	}
+	
+	public boolean remove(String s){
+		if(size == 0) return false;
+		int index = -1;
+		for(int i = 0; i < size; ++i ){
+			if(person[i].getLast().equals(s)){
+				index = i;
+				break;
+			}
+		}
+		if(index==-1) return false;
+		Person[] temp = new Person[person.length];
+		System.arraycopy(person,0,temp,0,index);
+		System.arraycopy(person,index+1,temp,index,person.length-(index+1));
+		person = temp;
+		--size;
+		return true;
+	}
 
 	@Override
 	public String toString() {
