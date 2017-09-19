@@ -40,3 +40,8 @@ public class Main {
 	}
 
 }
+
+/*
+	OUTPUT:-
+	1035500.0
+*/

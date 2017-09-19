@@ -1,5 +1,6 @@
 package assignment7.problem1;
 
+import java.util.Arrays;
 
 public class Person {
 	private String lastName;
@@ -36,18 +37,17 @@ public class Person {
 		int len = person.length;
 		int newlen = 2*len;
 		Person[] temp = new Person[newlen];
-		System.arraycopy(person, 0, temp, 0, len);
-		//Arrays.copyOf(person, temp);
+		//System.arraycopy(person, 0, temp, 0, len);
+		temp = Arrays.copyOf(person, newlen);
 		person = temp;
 	}
 	
 	public Person getPerson(String lastName) {
-		System.out.println(person.length);
-		
 		for(Person p: person) {
+			if(p == null) return p;
 			if(p.getLast().equals(lastName)) {
 				return p;
-			}
+			} 
 		}
 		
 		return null;
