@@ -61,3 +61,47 @@ public class Main {
 	}
 
 }
+
+/**
+	OUTPUT:-
+	Added List --> [name01 product1 2000.0
+	, name05 product2 1000.0
+	, name06 product3 500.0
+	, name08 product4 200.0
+	, name10 product5 1200.0
+	, name19 product6 3000.0
+	, name03 product7 1200.0
+	, name8 product8 7000.0
+	]
+	
+	Removed List --> [name05 product2 1000.0
+	, name06 product3 500.0
+	, name08 product4 200.0
+	, name10 product5 1200.0
+	, name19 product6 3000.0
+	, name03 product7 1200.0
+	]
+	
+	Size of the list --> 6
+	
+	Set List 0 --> [Editedname2 Editedproduct2 300.0
+	, name06 product3 500.0
+	, name08 product4 200.0
+	, name10 product5 1200.0
+	, name19 product6 3000.0
+	, name03 product7 1200.0
+	]
+	
+	Sort by sales amount --> [name08 product4 200.0
+	, Editedname2 Editedproduct2 300.0
+	, name06 product3 500.0
+	, name03 product7 1200.0
+	, name10 product5 1200.0
+	, name19 product6 3000.0
+	]
+	
+	Sort by sales amount --> [name03 product7 1200.0
+	, name10 product5 1200.0
+	, name19 product6 3000.0
+	]
+*/
