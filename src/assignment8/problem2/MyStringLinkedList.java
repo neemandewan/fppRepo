@@ -111,25 +111,21 @@ public class MyStringLinkedList {
 				// only one node
 				header = null;
 				n = null;
-				System.out.println("I am here 1");
 
 			} else if (n.previous == null) {
 				// remove first node
 				n.next.previous = null;
 				header = n.next;
 				n = null;
-				System.out.println("I am here 2");
 			} else if (n.next == null) {
 				// remove last node
 				n.previous.next = null;
 				n = null;
-				System.out.println("I am here 3");
 			} else {
 				// general case
 				n.next.previous = n.previous;
 				n.previous.next = n.next;
 				n = null;
-				System.out.println("I am here 4");
 			}
 
 		}
@@ -169,6 +165,72 @@ public class MyStringLinkedList {
 		System.out.println(str);
 	}
 	
+	public Node getFirst() {
+		if (header == null) return null;
+		else return header;
+	}
+	
+	public Node getLast(){
+		if (header == null) return null;
+		
+		for (Node i = header;i != null; i = i.next){
+			if(i.next == null) return i;
+		}
+		
+		return null;
+	}
+	
+	public void removeFirst(){
+		if (header == null)
+    		return;
+		else {
+			header.next.previous = null;
+			header = header.next;
+		}
+	}
+	
+	public void removeLast(){
+		if (header == null)
+    		return;
+		else {
+			Node temp = findLast();
+			temp.previous.next = null;
+			temp = null;
+		}
+	} 
+	
+	public void printMin () {
+		if (header == null) {
+			System.out.println("No Node to determine min..");
+			return;
+		}
+		
+		System.out.println("Minimum Node value is: " + header.value);
+		
+	}
+	
+	public void printMax () {
+		if (header == null) {
+			System.out.println("No Node to determine min..");
+			return;
+		}
+		
+		for (Node i = header;i != null; i = i.next){
+			if(i.next == null) {
+				System.out.println("Maximum Node value is: " + i.value);
+			}
+		}
+		
+	}
+	
+	public void print(Node n) {
+		if(n == null) return;
+		else {
+			System.out.println("Value: " + n.value);
+			print(n.next);
+		}
+	}
+	
 	public class Node {
 		String value;
 		Node next;
@@ -187,7 +249,7 @@ public class MyStringLinkedList {
 
 	public static void main(String[] args) {
 		MyStringLinkedList mySL = new MyStringLinkedList();
-		System.out.println(mySL);
+		/*System.out.println(mySL);
 		mySL.printReverse();
 		mySL.addFront("Carrot Cake");
 		System.out.println(mySL);
@@ -230,9 +292,9 @@ public class MyStringLinkedList {
 		mySL.printReverse();
 		mySL.deleteList();
 		System.out.println(mySL);
-		mySL.printReverse();
+		mySL.printReverse();*/
 		
-		System.out.println("Answer Add Last -->>");
+		System.out.println("1. Answer Add Last -->>");
 		mySL.addLast("Chicken Masala");
 		mySL.addLast("Mutton Paneer");
 		mySL.addLast("Pork MOMO");
@@ -242,54 +304,65 @@ public class MyStringLinkedList {
 		mySL.addLast("Alu Nimki");
 		System.out.println(mySL);
 		
-		System.out.println("Answer postAddNode -->>");
+		System.out.println("2. Answer postAddNode -->>");
 		mySL.postAddNode(mySL.findItem("Mutton Paneer"), "Barbeque");
 		System.out.println(mySL);
 		mySL.postAddNode(mySL.findItem("Chicken Masala"), "Chicken Tondori");
 		System.out.println(mySL);
+		
+		System.out.println("3. Answer Size -->>" + mySL.Size());
+		System.out.println("4. Answer isEmpty -->>" + mySL.isEmpty());
+		
+		Node frst = mySL.getFirst();
+		System.out.println("5. Answer getFirst -->>" + frst);
+		
+		Node lst = mySL.getLast();
+		System.out.println("6. Answer getLast -->> " + lst);
+		
+		System.out.println("7. Answer removeFirst -->>");
+		mySL.removeFirst();
+		System.out.println(mySL);
+		
+		System.out.println("8. Answer removeLast -->>");
+		mySL.removeLast();
+		System.out.println(mySL);
+		
+		System.out.println("9. Answer printMax -->>");
+		mySL.printMax();
+		
+		System.out.println("10. Answer printMin -->>");
+		mySL.printMin();
+		
+		System.out.println("11. Answer print all recursive -->>");
+		mySL.print(mySL.getFirst());
 	}
 
 }
 
 /**
 	OUTPUT:-
-	-->[NULL]
-	==>[NULL]
-	-->[Carrot Cake]-->[NULL]
-	==>[Carrot Cake]==>[NULL]
-	-->[Blueberry Muffin]-->[Carrot Cake]-->[NULL]
-	==>[Carrot Cake]==>[Blueberry Muffin]==>[NULL]
-	-->[Apple Pie]-->[Blueberry Muffin]-->[Carrot Cake]-->[NULL]
-	==>[Carrot Cake]==>[Blueberry Muffin]==>[Apple Pie]==>[NULL]
-	-->[Apple Pie]-->[Blueberry Muffin]-->[Carrot Cake]-->[Orange Juice]-->[NULL]
-	==>[Orange Juice]==>[Carrot Cake]==>[Blueberry Muffin]==>[Apple Pie]==>[NULL]
-	-->[Apple Pie]-->[Blueberry Muffin]-->[Carrot Cake]-->[Orange Juice]-->[Peach Sauce]-->[NULL]
-	==>[Peach Sauce]==>[Orange Juice]==>[Carrot Cake]==>[Blueberry Muffin]==>[Apple Pie]==>[NULL]
-	I am here 2
-	-->[Blueberry Muffin]-->[Carrot Cake]-->[Orange Juice]-->[Peach Sauce]-->[NULL]
-	==>[Peach Sauce]==>[Orange Juice]==>[Carrot Cake]==>[Blueberry Muffin]==>[NULL]
-	I am here 3
-	-->[Blueberry Muffin]-->[Carrot Cake]-->[Orange Juice]-->[NULL]
-	==>[Orange Juice]==>[Carrot Cake]==>[Blueberry Muffin]==>[NULL]
-	I am here 4
-	-->[Blueberry Muffin]-->[Orange Juice]-->[NULL]
-	==>[Orange Juice]==>[Blueberry Muffin]==>[NULL]
-	-->[Blueberry Muffin]-->[Carrot Cake]-->[Orange Juice]-->[NULL]
-	==>[Orange Juice]==>[Carrot Cake]==>[Blueberry Muffin]==>[NULL]
-	-->[Apple Pie]-->[Blueberry Muffin]-->[Carrot Cake]-->[Orange Juice]-->[NULL]
-	==>[Orange Juice]==>[Carrot Cake]==>[Blueberry Muffin]==>[Apple Pie]==>[NULL]
-	-->[Apple Pie]-->[Blueberry Muffin]-->[Carrot Cake]-->[Danish Delight]-->[Orange Juice]-->[NULL]
-	==>[Orange Juice]==>[Danish Delight]==>[Carrot Cake]==>[Blueberry Muffin]==>[Apple Pie]==>[NULL]
-	-->[Apple Pie]-->[Blueberry Muffin]-->[Carrot Cake]-->[Danish Delight]-->[Mango Smoothie]-->[Orange Juice]-->[NULL]
-	==>[Orange Juice]==>[Mango Smoothie]==>[Danish Delight]==>[Carrot Cake]==>[Blueberry Muffin]==>[Apple Pie]==>[NULL]
-	-->[Apple Pie]-->[Blueberry Muffin]-->[Carrot Cake]-->[Danish Delight]-->[Mango Smoothie]-->[Orange Juice]-->[Peach Sauce]-->[NULL]
-	==>[Peach Sauce]==>[Orange Juice]==>[Mango Smoothie]==>[Danish Delight]==>[Carrot Cake]==>[Blueberry Muffin]==>[Apple Pie]==>[NULL]
-	-->[NULL]
-	==>[NULL]
-	Answer Add Last -->>
+	1. Answer Add Last -->>
 	-->[Chicken Masala]-->[Mutton Paneer]-->[Pork MOMO]-->[NULL]
 	-->[Chicken Masala]-->[Mutton Paneer]-->[Pork MOMO]-->[Buff C MOMO]-->[Alu Nimki]-->[NULL]
-	Answer postAddNode -->>
+	2. Answer postAddNode -->>
 	-->[Chicken Masala]-->[Mutton Paneer]-->[Barbeque]-->[Pork MOMO]-->[Buff C MOMO]-->[Alu Nimki]-->[NULL]
 	-->[Chicken Masala]-->[Chicken Tondori]-->[Mutton Paneer]-->[Barbeque]-->[Pork MOMO]-->[Buff C MOMO]-->[Alu Nimki]-->[NULL]
+	3. Answer Size -->>7
+	4. Answer isEmpty -->>false
+	5. Answer getFirst -->>Chicken Masala
+	6. Answer getLast -->> Alu Nimki
+	7. Answer removeFirst -->>
+	-->[Chicken Tondori]-->[Mutton Paneer]-->[Barbeque]-->[Pork MOMO]-->[Buff C MOMO]-->[Alu Nimki]-->[NULL]
+	8. Answer removeLast -->>
+	-->[Chicken Tondori]-->[Mutton Paneer]-->[Barbeque]-->[Pork MOMO]-->[Buff C MOMO]-->[NULL]
+	9. Answer printMax -->>
+	Maximum Node value is: Buff C MOMO
+	10. Answer printMin -->>
+	Minimum Node value is: Chicken Tondori
+	11. Answer print all recursive -->>
+	Value: Chicken Tondori
+	Value: Mutton Paneer
+	Value: Barbeque
+	Value: Pork MOMO
+	Value: Buff C MOMO
 */
