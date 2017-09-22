@@ -112,15 +112,27 @@ public class MyBST {
 	}
 	
 	private Integer findMinVal(BinaryNode t){
-		return 0;
+		if(t == null) return 0;
+		
+		while(t.left != null) {
+			t = t.left;
+		}
+		
+		return t.element;
 	}
 	
 	public Integer findMax(){
-		return findMinVal(root);
+		return findMaxVal(root);
 	}
 	
 	private Integer findMaxVal(BinaryNode t){
-		return 0;
+		if(t == null) return 0;
+		
+		while(t.right != null) {
+			t = t.right;
+		}
+		
+		return t.element;
 	}
 		 
 	//Assume the data in the Node is an Integer.	
@@ -194,7 +206,7 @@ public class MyBST {
 		
 		int [] a = {15, 12, 9, 56, 1, 16, 19, 22, 3, 100, 2, 25};
 	
-		for (int j = 0; j < a.length; j++ ) {
+		/*for (int j = 0; j < a.length; j++ ) {
 			mybst.insert(a[j]);
 					
 		}
@@ -221,7 +233,7 @@ public class MyBST {
 		map.put(11, "Welcome");
 		map.remove(8);
 		String str = map.get(11)+", "+ map.get(10);
-		System.out.println(str);
+		System.out.println(str);*/
 		
 		System.out.println("Start from here -- >>");
 		a = new int[]{43, 15, 60, 8, 30, 50, 82, 20, 35, 70};
@@ -242,11 +254,39 @@ public class MyBST {
 		System.out.println("Contains 43: " + mybst.contains(43));
 		System.out.println("Contains 60: " + mybst.contains(60));
 		System.out.println("Contains 93: " + mybst.contains(93));
-		
-		System.out.println("\nd. getRoot: ");
-		System.out.println("getRoot: " + mybst.getRoot());
-		
-		System.out.println("leafnodes: " + mybst.leafNodes());
-		System.out.println("Size: " + mybst.size());
+		System.out.println("\nd. getRoot: " + mybst.getRoot());
+		System.out.println("\ne. leafnodes: " + mybst.leafNodes());
+		System.out.println("\nf. Size: " + mybst.size());
+		System.out.println("\ng. Min Value: " + mybst.findMin());
+		System.out.println("\nh. Max Value: " + mybst.findMax());
 	}
 }
+
+/**
+	OUTPUT:-
+	Start from here -- >>
+
+	Question data: [43, 15, 60, 8, 30, 50, 82, 20, 35, 70]
+	
+	a. PreOrder[VLR]: 
+	43,15,8,30,20,35,60,50,82,70,
+	
+	b. PostOrder[LRV]: 
+	8,20,35,30,15,50,70,82,60,43,
+	
+	c. Contains: 
+	Contains 43: true
+	Contains 60: true
+	Contains 93: false
+	
+	d. getRoot: 43
+	
+	e. leafnodes: 5
+	
+	f. Size: 10
+	
+	g. Min Value: 8
+	
+	h. Max Value: 82
+
+*/
