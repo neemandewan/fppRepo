@@ -1,9 +1,6 @@
 package assignment10.problem1;
 
 import java.util.Arrays;
-import java.util.Iterator;
-import java.util.TreeMap;
-import java.util.TreeSet;
 
 // Demo code for the user implemenation of Binary search tree
 public class MyBST {
